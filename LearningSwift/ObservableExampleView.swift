@@ -1,40 +1,45 @@
 //
-//  StateAndDataFlowView.swift
+//  ObservableExampleView.swift
 //  LearningSwift
 //
 //  Created by Maciej Sitkowski on 30/05/2025.
 //
-
+import Observation
 import SwiftUI
 
-struct StateAndDataFlowView: View {
-    @State private var isRecording: Bool = false
-    @State private var currentTranscript: String = "Tap 'Record' to start..."
+@Observable
+class NewSpeechEngine {
+    var isRecording: Bool = false
+    var transcript: String = ""
+}
+
+struct ObservableExampleView: View {
+    @State private var speechEngine = NewSpeechEngine()
 
     var body: some View {
         VStack {
             Text("EchoNote Transcript:").font(.headline)
 
-            TextEditor(text: $currentTranscript)
+            TextEditor(text: $speechEngine.transcript)
                 .font(.system(size: 16))
                 .padding()
                 .border(.gray)
                 .scrollContentBackground(.hidden)
 
             HStack {
-                RecordingButtonView(color: Color.blue, isRecording: $isRecording)
-                RecordingButtonView(color: Color.red, isRecording: $isRecording)
+                RecordingButtonView(color: Color.blue, isRecording: $speechEngine.isRecording)
+                RecordingButtonView(color: Color.red, isRecording: $speechEngine.isRecording)
             }
 
         }
         .padding()
-        .onChange(of: isRecording) { oldValue, newValue in
+        .onChange(of: speechEngine.isRecording) { oldValue, newValue in
             print("isRecording changed from \(oldValue) to \(newValue)")
 
             if newValue {
-                currentTranscript = "Recording..."
+                speechEngine.transcript = "Recording..."
             } else {
-                currentTranscript = "Tap 'Record' to start..."
+                speechEngine.transcript = "Tap 'Record' to start..."
             }
         }
     }
@@ -61,5 +66,5 @@ private struct RecordingButtonView: View {
 }
 
 #Preview {
-    StateAndDataFlowView()
+    ObservableExampleView()
 }
