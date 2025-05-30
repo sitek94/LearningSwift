@@ -8,24 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    var names: [String] = ["Maciej", "Kamil", "Krystian"]
-    
-    func printNames() -> Void {
-        for name in names {
-            print(name)
-        }
-    }
-    
-    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
-                .foregroundStyle(.tint)
+                .foregroundColor(.accentColor)
             Text("Hello, world!")
-            
-            Button("Print names", action: printNames)
+            TextEditor(text: /*@START_MENU_TOKEN@*/ .constant("Placeholder") /*@END_MENU_TOKEN@*/)
+                .padding()
+                .border(.gray)
+                .scrollContentBackground(.hidden)
         }
         .padding()
     }
