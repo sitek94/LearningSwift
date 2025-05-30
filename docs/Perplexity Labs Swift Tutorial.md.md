@@ -1,5 +1,3 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
-
 # Swift Concurrency and SwiftUI Data Flow: A Comprehensive Tutorial
 
 This tutorial will demystify Swift 6 concurrency patterns and help you understand why the LLM suggested those specific changes to your speech-to-text app [^5][^33]. As a developer with web development experience, you'll find many concepts analogous to frontend frameworks and async JavaScript patterns [^2][^5].
