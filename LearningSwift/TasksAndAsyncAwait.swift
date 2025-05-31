@@ -1,5 +1,5 @@
 //
-//  TasksAndAsyncAwaitView.swift
+//  TasksAndAsyncAwait.swift
 //  LearningSwift
 //
 //  Created by Maciej Sitkowski on 31/05/2025.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TasksAndAsyncAwaitView: View {
+struct TasksAndAsyncAwait: View {
     @State private var isLoading = true
     @State private var message = "💤 Idle"
 
@@ -68,5 +68,5 @@ private func fetchTranscriptFromServerSafely() async -> String {
 }
 
 #Preview {
-    TasksAndAsyncAwaitView()
+    TasksAndAsyncAwait()
 }

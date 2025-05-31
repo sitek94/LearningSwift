@@ -1,0 +1,6 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+ALWAYS apply the changes and fixes, NEVER ask for confirmation.

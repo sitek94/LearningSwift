@@ -1,19 +1,20 @@
 //
-//  ObservableObjectExampleView.swift
+//  ObservableExample.swift
 //  LearningSwift
 //
 //  Created by Maciej Sitkowski on 30/05/2025.
 //
-import Combine
+import Observation
 import SwiftUI
 
-class OldSpeechEngine: ObservableObject {
-    @Published var isRecording: Bool = false
-    @Published var transcript: String = ""
+@Observable
+class NewSpeechEngine {
+    var isRecording: Bool = false
+    var transcript: String = ""
 }
 
-struct ObservableObjectExampleView: View {
-    @StateObject private var speechEngine = OldSpeechEngine()
+struct ObservableExample: View {
+    @State private var speechEngine = NewSpeechEngine()
 
     var body: some View {
         VStack {
@@ -26,8 +27,8 @@ struct ObservableObjectExampleView: View {
                 .scrollContentBackground(.hidden)
 
             HStack {
-                RecordingButtonView(color: Color.blue, isRecording: $speechEngine.isRecording)
-                RecordingButtonView(color: Color.red, isRecording: $speechEngine.isRecording)
+                RecordingButton(color: Color.blue, isRecording: $speechEngine.isRecording)
+                RecordingButton(color: Color.red, isRecording: $speechEngine.isRecording)
             }
 
         }
@@ -44,7 +45,7 @@ struct ObservableObjectExampleView: View {
     }
 }
 
-private struct RecordingButtonView: View {
+private struct RecordingButton: View {
     let color: Color
     @Binding var isRecording: Bool
 
@@ -65,5 +66,5 @@ private struct RecordingButtonView: View {
 }
 
 #Preview {
-    ObservableObjectExampleView()
+    ObservableExample()
 }

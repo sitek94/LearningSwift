@@ -1,5 +1,5 @@
 //
-//  StateAndDataFlowView.swift
+//  StateAndDataFlow.swift
 //  LearningSwift
 //
 //  Created by Maciej Sitkowski on 30/05/2025.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StateAndDataFlowView: View {
+struct StateAndDataFlow: View {
     @State private var isRecording: Bool = false
     @State private var currentTranscript: String = "Tap 'Record' to start..."
 
@@ -22,8 +22,8 @@ struct StateAndDataFlowView: View {
                 .scrollContentBackground(.hidden)
 
             HStack {
-                RecordingButtonView(color: Color.blue, isRecording: $isRecording)
-                RecordingButtonView(color: Color.red, isRecording: $isRecording)
+                RecordingButton(color: Color.blue, isRecording: $isRecording)
+                RecordingButton(color: Color.red, isRecording: $isRecording)
             }
 
         }
@@ -40,7 +40,7 @@ struct StateAndDataFlowView: View {
     }
 }
 
-private struct RecordingButtonView: View {
+private struct RecordingButton: View {
     let color: Color
     @Binding var isRecording: Bool
 
@@ -61,5 +61,5 @@ private struct RecordingButtonView: View {
 }
 
 #Preview {
-    StateAndDataFlowView()
+    StateAndDataFlow()
 }
