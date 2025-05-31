@@ -1,8 +1,20 @@
-# Swift API Design Guidelines
+To facilitate use as a quick reference, the details of many guidelines can be expanded individually. Details are never hidden when this page is printed. 
+## Table of Contents 
+  * Introduction
+  * Fundamentals
+  * Naming
+    * Promote Clear Usage
+    * Strive for Fluent Usage
+    * Use Terminology Well
+  * Conventions
+    * General Conventions
+    * Parameters
+    * Argument Labels
+  * Special Instructions
+
 
 ## Introduction 
 Delivering a clear, consistent developer experience when writing Swift code is largely defined by the names and idioms that appear in APIs. These design guidelines explain how to make sure that your code feels like a part of the larger Swift ecosystem.
-
 ## Fundamentals 
   * **Clarity at the point of use** is your most important goal. Entities such as methods and properties are declared only once but _used_ repeatedly. Design APIs to make those uses clear and concise. When evaluating a design, reading a declaration is seldom sufficient; always examine a use case to make sure it looks clear in context.
   * **Clarity is more important than brevity.** Although Swift code can be compact, it is a _non-goal_ to enable the smallest possible code with the fewest characters. Brevity in Swift code, where it occurs, is a side-effect of the strong type system and features that naturally reduce boilerplate.

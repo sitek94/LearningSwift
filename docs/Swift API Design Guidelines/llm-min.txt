@@ -1,0 +1,244 @@
+# IntegratedKnowledgeManifest_SKF/1.4 LA
+# SourceDocs: [www_swift_org_documentation_api-design-guidelines_-None]
+# GenerationTimestamp: 2025-05-31T14:33:29+00:00
+# PrimaryNamespace: www_swift_org_documentation_api-design-guidelines_
+
+# SECTION: DEFINITIONS (Prefix: D)
+# Format_PrimaryDef: Dxxx:Gxxx_Entity [DEF_TYP] [NAMESPACE "relative.path"] [OPERATIONS {op1:RetT(p1N:p1T); op2_static:RetT()}] [ATTRIBUTES {attr1:AttrT1("Def:Val","RO")}] [CONSTANTS {c1:ValT1("Val")}] ("Note")
+# ---"
+D001:G001_reversed Function DEF_TYP Function ("Returns a 'view' of self containing the same elements in reverse order.")
+D002:G002_ReverseCollection DataType DEF_TYP DTDef ("View of reversed collection.")
+D003:G003_prepend Function DEF_TYP Function OPERATIONS {prepend:Void(newHead:G028)} ("Inserts newHead at the beginning of self.")
+D004:G004_prepending Function DEF_TYP Function OPERATIONS {prepending:G005(head:G010)} ("Returns a List containing head followed by the elements of self.")
+D005:G005_List Component DEF_TYP CompDef NAMESPACE "." ATTRIBUTES {first:Opt[G010]("nil","RO")} ("A collection that supports equally efficient insertion/removal at any position.")
+D006:G006_popFirst Function DEF_TYP Function OPERATIONS {popFirst:Opt[G010]()} ("Removes and returns the first element of self if non-empty; returns nil otherwise.")
+D007:G007_subscript Function DEF_TYP Function OPERATIONS {subscript:G010(index:G028)} ("Accesses the indexth element.")
+D008:G008_init Function DEF_TYP Function OPERATIONS {init:Self(count:G028,repeatedElement:G010)} ("Creates an instance containing n repetitions of x.")
+D009:G009_first DataType DEF_TYP DTDef ("The element at the beginning of self, or nil if self is empty.")
+D010:G011_print Function DEF_TYP Function OPERATIONS {print:Void(items:List[G106],separator:G027=" ",terminator:G027="\n")} ("Writes the textual representation of each element of items to the standard output.")
+D011:G012_CustomDebugStringConvertible Interface DEF_TYP IfceDef
+D012:G013_CustomStringConvertible Interface DEF_TYP IfceDef
+D013:G014_debugPrint Function DEF_TYP Function
+D014:G015_remove Function DEF_TYP Function NAMESPACE "List" OPERATIONS {remove:G010(at:G016)} ("Removes the element at a given position within a collection.")
+D015:G016_Index DataType DEF_TYP DTDef
+D016:G017_remove Function DEF_TYP Function NAMESPACE "List" OPERATIONS {remove:Opt[G010](member:G010)} ("Removes specific member element.")
+D017:G018_ViewController Interface DEF_TYP IfceDef NAMESPACE "." ("Protocol for view controllers.")
+D018:G018_ViewController PARAM_DETAIL G019_View ("associatedtype ContentView : View")
+D019:G019_View Interface DEF_TYP IfceDef ("Protocol for views.")
+D020:G020_ProductionLine Component DEF_TYP CompDef NAMESPACE "."
+D021:G021_restock Function DEF_TYP Function NAMESPACE "ProductionLine" OPERATIONS {restock:Void(from:G022)}
+D022:G022_WidgetFactory Component DEF_TYP CompDef
+D023:G023_Sequence Interface DEF_TYP IfceDef NAMESPACE "." ("Protocol for sequences.")
+D024:G023_Sequence PARAM_DETAIL G025_IteratorProtocol ("associatedtype Iterator : IteratorProtocol")
+D025:G025_IteratorProtocol Interface DEF_TYP IfceDef NAMESPACE "." ("Protocol for iterators.")
+D026:G026_NSObject DataType DEF_TYP DTDef ("Weakly typed object example.")
+D027:G027_String DataType DEF_TYP DTDef ("Fundamental text type.")
+D028:G028_Int DataType DEF_TYP DTDef ("Fundamental integer type.")
+D029:G029_addObserver Function DEF_TYP Function NAMESPACE "." OPERATIONS {addObserver:Void(observer:G026,forKeyPath:G027)} ("Adds observer for key path.")
+D030:G030_insert Function DEF_TYP Function
+D031:G031_subviews Function DEF_TYP Function
+D032:G032_capitalizingNouns Function DEF_TYP Function
+D033:G033_makeIterator Function DEF_TYP Function ("Factory method example.")
+D034:G034_Color Component DEF_TYP CompDef
+D035:G035_makeWidget Function DEF_TYP Function ("Factory method example.")
+D036:G036_Link Component DEF_TYP CompDef
+D037:G037_RGBColor Component DEF_TYP CompDef
+D038:G038_distance Function DEF_TYP Function ("Non-mutating method.")
+D039:G039_successor Function DEF_TYP Function ("Non-mutating method.")
+D040:G040_sort Function DEF_TYP Function ("Mutating method.")
+D041:G041_append Function DEF_TYP Function NAMESPACE "Array" OPERATIONS {append:Void(newElement:G010)} ("Inserts newElement at self.endIndex.")
+D042:G042_reverse Function DEF_TYP Function ("Reverses self in-place.")
+D043:G043_sorted Function DEF_TYP Function ("Returns sorted copy.")
+D044:G044_appending Function DEF_TYP Function ("Returns copy with element appended.")
+D045:G045_stripNewlines Function DEF_TYP Function ("Strips all the newlines from self in-place.")
+D046:G046_strippingNewlines Function DEF_TYP Function OPERATIONS {strippingNewlines:G027()} ("Returns a copy of self with all the newlines stripped.")
+D047:G047_union Function DEF_TYP Function ("Non-mutating method (noun-based).")
+D048:G048_formUnion Function DEF_TYP Function ("Mutating method (noun-based).")
+D049:G049_successor Function DEF_TYP Function ("Non-mutating method (noun-based).")
+D050:G050_formSuccessor Function DEF_TYP Function ("Mutating method (noun-based).")
+D051:G051_isEmpty DataType DEF_TYP DTDef ("Boolean property for emptiness.")
+D052:G052_intersects Function DEF_TYP Function ("Boolean method for checking intersection.")
+D053:G053_Collection Interface DEF_TYP IfceDef ("Protocol that describes what something is.")
+D054:G054_Equatable Interface DEF_TYP IfceDef ("Protocol that describes a capability.")
+D055:G055_ProgressReporting Interface DEF_TYP IfceDef ("Protocol that describes a capability.")
+D056:G056_Array Component DEF_TYP CompDef NAMESPACE "." ("Contiguous data structure.")
+D057:G057_min Function DEF_TYP Function ("Free function.")
+D058:G058_UTF8 DataType DEF_TYP DTDef
+D059:G059_CodeUnit DataType DEF_TYP DTDef
+D060:G060_ASCII Constant DEF_TYP CONSTANTS {ASCII:String("")}
+D061:G061_SMTP Constant DEF_TYP CONSTANTS {SMTP:String("")}
+D062:G062_SecureSMTPServer Component DEF_TYP CompDef
+D063:G063_RadarScanner Component DEF_TYP CompDef
+D064:G064_Shape Component DEF_TYP CompDef NAMESPACE "."
+D065:G065_Point Component DEF_TYP CompDef
+D066:G066_LineSegment Component DEF_TYP CompDef
+D067:G067_Database Component DEF_TYP CompDef NAMESPACE "."
+D068:G068_index Function DEF_TYP Function NAMESPACE "Database" OPERATIONS {index:Void()} ("Rebuilds the database's search index.")
+D069:G069_index Function DEF_TYP Function NAMESPACE "Database" OPERATIONS {index:G071(n:G028,inTable:G070)} ("Returns the nth row in the given table.")
+D070:G070_TableID DataType DEF_TYP DTDef
+D071:G071_TableRow DataType DEF_TYP DTDef
+D072:G072_Box Component DEF_TYP CompDef NAMESPACE "."
+D073:G073_value Function DEF_TYP Function NAMESPACE "Box" OPERATIONS {value:Opt[G028]();value:Opt[G027]()} ("Returns stored value (overloaded).")
+D074:G074_compare Function DEF_TYP Function NAMESPACE "String" OPERATIONS {compare:G077(other:G027,options:G075="[]",range:Range?=nil,locale:G076?=nil)} ("Compares strings.")
+D075:G075_CompareOptions DataType DEF_TYP DTDef ("Options for string comparison.")
+D076:G076_Locale DataType DEF_TYP DTDef ("Type for locale information.")
+D077:G077_Ordering DataType DEF_TYP DTDef ("Result type for comparison.")
+D078:G078_StringCompareOptions DataType DEF_TYP DTDef ("Options for string comparison.")
+D079:G079_#fileID Constant DEF_TYP CONSTANTS {#fileID:String("")} ("Compiler constant for file ID.")
+D080:G080_#filePath Constant DEF_TYP CONSTANTS {#filePath:String("")} ("Compiler constant for file path.")
+D081:G081_#file Constant DEF_TYP CONSTANTS {#file:String("")} ("Compiler constant for file name.")
+D082:G082_min Function DEF_TYP Function ("Free function (omit label example).")
+D083:G083_zip Function DEF_TYP Function ("Free function (omit label example).")
+D084:G084_Int64 DataType DEF_TYP DTDef ("64-bit integer type.")
+D085:G085_UInt32 DataType DEF_TYP DTDef NAMESPACE "." ("32-bit unsigned integer type.")
+D086:G086_init Function DEF_TYP Function NAMESPACE "String" OPERATIONS {init:Self(_:G087,radix:G028=10)} ("Initializes string from integer.")
+D087:G087_BigInt DataType DEF_TYP DTDef ("Arbitrary-precision integer type.")
+D088:G088_init Function DEF_TYP Function NAMESPACE "UInt32" OPERATIONS {init:Self(_:G089)} ("Initializes from Int16 (widening).")
+D089:G089_Int16 DataType DEF_TYP DTDef ("16-bit integer type.")
+D090:G090_init Function DEF_TYP Function NAMESPACE "UInt32" OPERATIONS {init:Self(truncating:G091)} ("Initializes from UInt64 (truncating).")
+D091:G091_UInt64 DataType DEF_TYP DTDef ("64-bit unsigned integer type.")
+D092:G092_init Function DEF_TYP Function NAMESPACE "UInt32" OPERATIONS {init:Self(saturating:G091)} ("Initializes from UInt64 (saturating).")
+D093:G093_move Function DEF_TYP Function ("Example of bad naming.")
+D094:G094_fade Function DEF_TYP Function ("Example of bad naming.")
+D095:G095_moveTo Function DEF_TYP Function ("Example of good naming.")
+D096:G096_fadeFrom Function DEF_TYP Function ("Example of good naming.")
+D097:G097_addSubview Function DEF_TYP Function
+D098:G098_dismiss Function DEF_TYP Function OPERATIONS {dismiss:Void(animated:Bool)}
+D099:G099_split Function DEF_TYP Function OPERATIONS {split:Self(maxSplits:G028)}
+D100:G100_sorted Function DEF_TYP Function OPERATIONS {sorted:Self(isOrderedBefore:G102)}
+D101:G101_Student Component DEF_TYP CompDef
+D102:G102_namePrecedes Function DEF_TYP Function ("Predicate for student name order.")
+D103:G103_ensureUniqueStorage Function DEF_TYP Function NAMESPACE "." OPERATIONS {ensureUniqueStorage:Tuple(reallocated:Bool,capacityChanged:Bool)(minimumCapacity:G028,allocate:Closure(byteCount:G028->G104))} ("Ensures unique storage capacity.")
+D104:G104_UnsafePointer<Void> DataType DEF_TYP DTDef ("Pointer type.")
+D105:G105_append Function DEF_TYP Function NAMESPACE "Array" OPERATIONS {append:Void(contentsOf:Sequence[G010])} ("Inserts the contents of newElements, in order, at self.endIndex.")
+D106:G106_Any DataType DEF_TYP DTDef ("Type-erased type.")
+D107:G107_AnyObject DataType DEF_TYP DTDef ("Type-erased class type.")
+
+# SECTION: INTERACTIONS (Prefix: I)
+# Format: Ixxx:Source_Ref INT_VERB Target_Ref_Or_Literal ("Note_Conditions_Error(Gxxx_ErrorType)")
+# ---"
+I001:employees INVOKES G015_remove ("at: x")
+I002:employees INVOKES G017_remove ("x") ("unclear example")
+I003:allViews INVOKES removeElement ("cancelButton") ("example of bad naming")
+I004:allViews INVOKES G017_remove ("cancelButton") ("clearer example")
+I005:grid INVOKES add ("self, for: graphics") ("vague example")
+I006:grid INVOKES G029_addObserver ("observer: self, forKeyPath: graphics") ("clear example")
+I007:x INVOKES G030_insert ("y, at: z")
+I008:x INVOKES G031_subviews ("havingColor: y")
+I009:x INVOKES G032_capitalizingNouns ()
+I010:x INVOKES G030_insert ("y, position: z") ("example of bad naming")
+I011:x INVOKES G031_subviews ("color: y") ("example of bad naming")
+I012:x INVOKES G032_capitalizingNouns () ("example of bad naming")
+I013:x INVOKES G033_makeIterator ()
+I014:G034_Color INVOKES G008_init ("red: 32, green: 64, blue: 128")
+I015:factory INVOKES G035_makeWidget ("gears: 42, spindles: 14")
+I016:G036_Link INVOKES G008_init ("target: destination")
+I017:G034_Color INVOKES G008_init ("havingRGBValuesRed: 32, green: 64, andBlue: 128") ("example of bad naming")
+I018:factory INVOKES G035_makeWidget ("havingGearCount: 42, andSpindleCount: 14") ("example of bad naming")
+I019:G036_Link INVOKES G008_init ("to: destination") ("example of bad naming")
+I020:G037_RGBColor INVOKES G008_init ("cmykForeground") ("value preserving conversion")
+I021:x INVOKES G038_distance ("to: y")
+I022:i INVOKES G039_successor ()
+I023:G011_print INVOKES print ("x")
+I024:x INVOKES G040_sort ()
+I025:x INVOKES G041_append ("y")
+I026:x INVOKES G043_sorted ()
+I027:x INVOKES G044_appending ("y")
+I028:x INVOKES G042_reverse ()
+I029:x INVOKES G001_reversed ()
+I030:s INVOKES G045_stripNewlines ()
+I031:t INVOKES G046_strippingNewlines ()
+I032:y INVOKES G047_union ("z")
+I033:y INVOKES G048_formUnion ("z")
+I034:c INVOKES G049_successor ("i")
+I035:c INVOKES G050_formSuccessor ("&i")
+I036:x READS_FROM G051_isEmpty ()
+I037:line1 INVOKES G052_intersects ("line2")
+I038:G057_min INVOKES min ("x, y, z")
+I039:lastName INVOKES G074_compare ("royalFamilyName, options: [], range: nil, locale: nil")
+I040:lastName INVOKES G074_compare ("royalFamilyName") ("using default parameters")
+I041:G082_min INVOKES min ("number1, number2") ("omit label example")
+I042:G083_zip INVOKES zip ("sequence1, sequence2") ("omit label example")
+I043:G084_Int64 INVOKES G008_init ("someUInt32") ("value preserving conversion")
+I044:G027_String INVOKES G086_init ("veryLargeNumber")
+I045:G027_String INVOKES G086_init ("veryLargeNumber, radix: 16")
+I046:a INVOKES G093_move ("toX: b, y: c") ("example of bad naming")
+I047:a INVOKES G094_fade ("fromRed: b, green: c, blue: d") ("example of bad naming")
+I048:a INVOKES G095_moveTo ("x: b, y: c") ("example of good naming")
+I049:a INVOKES G096_fadeFrom ("red: b, green: c, blue: d") ("example of good naming")
+I050:x INVOKES G097_addSubview ("y")
+I051:view INVOKES G098_dismiss ("animated: false")
+I052:words INVOKES G099_split ("maxSplits: 12")
+I053:students INVOKES G100_sorted ("isOrderedBefore: Student.namePrecedes")
+I054:view INVOKES G098_dismiss ("false") ("example of bad naming")
+I055:words INVOKES G099_split ("12") ("example of bad naming")
+I056:values INVOKES Uni[G041_append,G105_append] ("[2, 3, 4]") ("ambiguous example")
+
+# SECTION: USAGE_PATTERNS (Prefix: U)
+# Format: U_Name:PatternTitleKeyword
+#         U_Name.N:[Actor_Or_Ref] ACTION_KEYWORD (Target_Or_Data_Involving_Ref) -> [Result_Or_State_Change_Involving_Ref]
+# ACTION_KEYWORD Enum: CREATE (instance), CONFIGURE (object/settings), INVOKE (operation/method), GET_ATTR (read attribute/property), SET_ATTR (write attribute/property), PROCESS_DATA, CHECK_STATE, ITERATE (over a collection/stream, e.g., async for), RAISE_ERR, HANDLE_ERR(Gxxx_ErrorType)
+---
+U_ListMutatingOps:ListModification
+U_ListMutatingOps.1:[list] CREATE G005 () -> [G005]
+U_ListMutatingOps.2:[list] INVOKE G003_prepend (newHead: G028_value) -> [Void]
+U_ListMutatingOps.3:[list] INVOKE G015_remove (at: G016_index) -> [G010]
+U_ListMutatingOps.4:[list] INVOKE G017_remove (member: G010_element) -> [Opt[G010]]
+U_ListMutatingOps.5:[list] INVOKE G006_popFirst () -> [Opt[G010]]
+
+U_CollectionNonMutatingPairs:CollectionTransformation
+U_CollectionNonMutatingPairs.1:[collection] CREATE G056_Array () -> [G056_Array]
+U_CollectionNonMutatingPairs.2:[collection] INVOKE G040_sort () -> [Void]
+U_CollectionNonMutatingPairs.3:[collection] INVOKE G043_sorted () -> [Self]
+U_CollectionNonMutatingPairs.4:[collection] INVOKE G041_append (newElement: G010_element) -> [Void]
+U_CollectionNonMutatingPairs.5:[collection] INVOKE G044_appending (newElement: G010_element) -> [Self]
+U_CollectionNonMutatingPairs.6:[collection] INVOKE G042_reverse () -> [Void]
+U_CollectionNonMutatingPairs.7:[collection] INVOKE G001_reversed () -> [G002]
+U_CollectionNonMutatingPairs.8:[string] CREATE G027 () -> [G027]
+U_CollectionNonMutatingPairs.9:[string] INVOKE G045_stripNewlines () -> [Void]
+U_CollectionNonMutatingPairs.10:[string] INVOKE G046_strippingNewlines () -> [G027]
+
+U_ObjectCreation:InstanceInitialization
+U_ObjectCreation.1:[list] CREATE G005 (count: G028_value, repeatedElement: G010_element) -> [G005]
+U_ObjectCreation.2:[color] CREATE G034 (red: G028_value, green: G028_value, blue: G028_value) -> [G034]
+U_ObjectCreation.3:[factory] CREATE G022_WidgetFactory () -> [G022_WidgetFactory]
+U_ObjectCreation.4:[newPart] INVOKE G035_makeWidget (gears: G028_value, spindles: G028_value) -> [Any]
+
+U_ParameterHandling:APIInvocationStyles
+U_ParameterHandling.1:[instance] CREATE Any () -> [Any]
+U_ParameterHandling.2:[observer] CREATE G026_NSObject () -> [G026_NSObject]
+U_ParameterHandling.3:[keyPath] CREATE G027_String () -> [G027_String]
+U_ParameterHandling.4:[instance] INVOKE G029_addObserver (observer: G026_observer, forKeyPath: G027_keyPath) -> [Void]
+U_ParameterHandling.5:[string1] CREATE G027_String () -> [G027_String]
+U_ParameterHandling.6:[string2] CREATE G027_String () -> [G027_String]
+U_ParameterHandling.7:[string1] INVOKE G027.G074_compare (other: G027_string2) -> [G077]
+U_ParameterHandling.8:[viewController] CREATE G018_ViewController () -> [G018_ViewController]
+U_ParameterHandling.9:[viewController] INVOKE G098_dismiss (animated: Bool_value) -> [Void]
+U_ParameterHandling.10:[collection] CREATE Any () -> [Any]
+U_ParameterHandling.11:[collection] INVOKE G099_split (maxSplits: G028_value) -> [Self]
+U_ParameterHandling.12:[collection] CREATE Any () -> [Any]
+U_ParameterHandling.13:[predicate] CREATE G102_namePrecedes () -> [G102_namePrecedes]
+U_ParameterHandling.14:[collection] INVOKE G100_sorted (isOrderedBefore: G102_predicate) -> [Self]
+
+U_TypeConversionInitializers:NumericConversion
+U_TypeConversionInitializers.1:[value] CREATE G085_UInt32 () -> [G085_UInt32]
+U_TypeConversionInitializers.2:[int64Value] CREATE G084_Int64 (G085_value) -> [G084_Int64]
+U_TypeConversionInitializers.3:[source] CREATE G091_UInt64 () -> [G091_UInt64]
+U_TypeConversionInitializers.4:[uint32Value] CREATE G085_UInt32 (truncating: G091_source) -> [G085_UInt32]
+U_TypeConversionInitializers.5:[valueToApproximate] CREATE G091_UInt64 () -> [G091_UInt64]
+U_TypeConversionInitializers.6:[uint32Value] CREATE G085_UInt32 (saturating: G091_valueToApproximate) -> [G085_UInt32]
+
+U_ArrayAppendPolymorphism:AppendOverloadResolution
+U_ArrayAppendPolymorphism.1:[array] CREATE G056_Array () -> [G056_Array]
+U_ArrayAppendPolymorphism.2:[element] CREATE G010_Element () -> [G010_Element]
+U_ArrayAppendPolymorphism.3:[array] INVOKE G056_Array.G041_append (newElement: G010_element) -> [Void]
+U_ArrayAppendPolymorphism.4:[sequence] CREATE Sequence[G010] () -> [Sequence[G010]]
+U_ArrayAppendPolymorphism.5:[array] INVOKE G056_Array.G105_append (contentsOf: Sequence[G010]_sequence) -> [Void]
+
+U_ComplexStorageManagement:EnsureUniqueStorage
+U_ComplexStorageManagement.1:[instance] CREATE Any () -> [Any]
+U_ComplexStorageManagement.2:[requestedCapacity] CREATE G028_Int () -> [G028_Int]
+U_ComplexStorageManagement.3:[allocateClosure] CREATE Closure (byteCount:G028->G104) () -> [Closure]
+U_ComplexStorageManagement.4:[resultTuple] INVOKE G103_ensureUniqueStorage (minimumCapacity: G028_requestedCapacity, allocate: Closure_allocateClosure) -> [Tuple(reallocated:Bool,capacityChanged:Bool)]
+
+# END_OF_MANIFEST
