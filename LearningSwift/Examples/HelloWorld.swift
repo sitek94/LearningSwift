@@ -1,5 +1,5 @@
 //
-//  HellWorld.swift
+//  HelloWorld.swift
 //  LearningSwift
 //
 //  Created by Maciej Sitkowski on 30/05/2025.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HellWorld: View {
+struct HelloWorld: View {
 
     let names: [String] = ["Bilbo", "Frodo", "Sam"]
 
@@ -46,5 +46,5 @@ struct HellWorld: View {
 }
 
 #Preview {
-    HellWorld()
+    HelloWorld()
 }

@@ -47,7 +47,7 @@ private func fetchTranscriptFromServer() async throws -> String {
 
     // Simulate network delay - Task.sleep can only be called from an async context
     // or within a Task.
-    try await Task.sleep(nanoseconds: 1_000_000_000)  // Pauses for 2 seconds
+    try await Task.sleep(for: .seconds(1))
 
     // Simulate error
     if Bool.random() {
