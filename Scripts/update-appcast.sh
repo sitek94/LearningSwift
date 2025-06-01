@@ -25,4 +25,4 @@ echo "
 " > ITEM.txt
 
 # Insert new item after <language>
-sed -i '' -e "/<\/language>/r ITEM.txt" docs/appcast.xml
+sed -i '' -e "/<\/language>/r ITEM.txt" appcast.xml
