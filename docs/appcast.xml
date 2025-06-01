@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="yes"?>
+<rss
+  xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"
+  version="2.0"
+>
+  <channel>
+    <title>LearningSwift-0.9.0</title>
+    <item>
+      <title>0.9.0</title>
+      <pubDate>Sun, 01 Jun 2025 18:06:37 +0200</pubDate>
+      <sparkle:version>1</sparkle:version>
+      <sparkle:shortVersionString>0.9.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.1</sparkle:minimumSystemVersion>
+      <enclosure
+        url="https://github.com/sitek94/LearningSwift/releases/download/v0.9.0/LearningSwift.dmg"
+        length="1189434"
+        type="application/octet-stream"
+        sparkle:edSignature="H5ioCooPms25czBvsfrcUE6USdAf01ol63E+NDNFqJGgQkcXLFigZce8/orGYZF63URJI3KyJukhKfBqIjkbCA=="
+      />
+    </item>
+  </channel>
+</rss>
