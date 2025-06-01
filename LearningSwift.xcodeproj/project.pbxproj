@@ -11,6 +11,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A24BF7F92DECD72000CB0391 /* base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = base.xcconfig; sourceTree = "<group>"; };
+		A24BF7FA2DECD72000CB0391 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
+		A24BF7FB2DECD72000CB0391 /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
 		A251C1872DE9F43200183533 /* LearningSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A251C2922DEC9E5200183533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,6 +48,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A24BF7F72DECD67400CB0391 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A24BF7F92DECD72000CB0391 /* base.xcconfig */,
+				A24BF7FA2DECD72000CB0391 /* debug.xcconfig */,
+				A24BF7FB2DECD72000CB0391 /* release.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		A251C17E2DE9F43200183533 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +66,7 @@
 				A251C1892DE9F43200183533 /* Source */,
 				A251C1882DE9F43200183533 /* Products */,
 				A251C28E2DEC9B2200183533 /* Resources */,
+				A24BF7F72DECD67400CB0391 /* Config */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,6 +284,7 @@
 		};
 		A251C1972DE9F43600183533 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A24BF7FA2DECD72000CB0391 /* debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +317,7 @@
 		};
 		A251C1982DE9F43600183533 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A24BF7FB2DECD72000CB0391 /* release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

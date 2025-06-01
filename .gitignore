@@ -6,6 +6,7 @@
 # Derived data, build products, and logs
 DerivedData/
 build/
+dist/
 *.xcworkspace/xcuserdata/
 
 # SwiftPM
@@ -26,3 +27,6 @@ playground.xcworkspace/xcuserdata/
 *.moved-aside
 *.swp
 *.lock
+
+# Secrets
+Secrets/
