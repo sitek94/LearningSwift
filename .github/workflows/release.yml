@@ -29,7 +29,6 @@ jobs:
           xcode-version: '16.2'
 
       - run: Scripts/print-env.sh
-      - run: Scripts/replace-environment-variables.sh
       - run: Scripts/setup-certificate.sh
       - run: Scripts/build-app.sh
       - run: Scripts/package-and-notarize-release.sh

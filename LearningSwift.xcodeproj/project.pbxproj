@@ -14,8 +14,8 @@
 		A24BF7F92DECD72000CB0391 /* base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = base.xcconfig; sourceTree = "<group>"; };
 		A24BF7FA2DECD72000CB0391 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
 		A24BF7FB2DECD72000CB0391 /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		A24BF8312DECFC6400CB0391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A251C1872DE9F43200183533 /* LearningSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A251C2922DEC9E5200183533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -61,12 +61,12 @@
 		A251C17E2DE9F43200183533 = {
 			isa = PBXGroup;
 			children = (
-				A251C2922DEC9E5200183533 /* Info.plist */,
 				A251C2842DEC99E700183533 /* Examples */,
 				A251C1892DE9F43200183533 /* Source */,
 				A251C1882DE9F43200183533 /* Products */,
 				A251C28E2DEC9B2200183533 /* Resources */,
 				A24BF7F72DECD67400CB0391 /* Config */,
+				A24BF8312DECFC6400CB0391 /* Info.plist */,
 			);
 			sourceTree = "<group>";
 		};

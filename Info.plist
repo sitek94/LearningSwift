@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleShortVersionString</key>
-	<string>#VERSION#</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>#VERSION#</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>SUEnableInstallerLauncherService</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
