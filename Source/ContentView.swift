@@ -7,13 +7,22 @@
 
 import SwiftUI
 
+extension Bundle {
+    var buildNumber: String {
+        return infoDictionary?["CFBundleVersion"] as? String ?? "Unknown"
+    }
+    var version: String {
+        return infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
+    }
+}
+
 struct ContentView: View {
     @State private var viewModel = SpeechViewModel()
 
     var body: some View {
         VStack(spacing: 16) {
             HStack(alignment: .center) {
-                Text("EchoNote")
+                Text("LearningSwift v\(Bundle.main.version)")
                     .font(.largeTitle)
 
                 Spacer()

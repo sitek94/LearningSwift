@@ -4,8 +4,10 @@
 <dict>
 	<key>SUEnableInstallerLauncherService</key>
 	<true/>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
 	<key>SUFeedURL</key>
-	<string>https://sitek94.github.io/LearningSwift</string>
+	<string>https://sitek94.github.io/LearningSwift/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>g1bjy59xQP2dv8gERpot9tU9fgjI6no6QH+sk3NRb1I=</string>
 </dict>
