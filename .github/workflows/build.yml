@@ -25,7 +25,11 @@ jobs:
 
       - name: Build
         run: |
-          xcodebuild -project LearningSwift.xcodeproj -scheme LearningSwift -configuration Release -derivedDataPath build
+          xcodebuild -project LearningSwift.xcodeproj -scheme LearningSwift -configuration Release \
+            -derivedDataPath build \
+            CODE_SIGN_IDENTITY="-" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
