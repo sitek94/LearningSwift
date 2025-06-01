@@ -32,8 +32,30 @@ jobs:
             CODE_SIGNING_REQUIRED=YES \
             CODE_SIGNING_ALLOWED=YES
 
+      - name: Create DMG
+        run: |
+          mkdir -p dist
+          cp -R build/Build/Products/Release/LearningSwift.app dist/
+          hdiutil create -volname "LearningSwift" -srcfolder dist -ov -format UDZO dist/LearningSwift.dmg
+
+      - name: Notarize DMG
+        run: |
+          xcrun notarytool submit dist/LearningSwift.dmg \
+            --apple-id "${{ secrets.APPLE_ID }}" \
+            --password "${{ secrets.APPLE_ID_PASSWORD }}" \
+            --team-id "${{ secrets.APPLE_TEAM_ID }}" \
+            --wait
+
+          xcrun stapler staple dist/LearningSwift.dmg
+
       - name: Upload signed app
         uses: actions/upload-artifact@v4
         with:
           name: LearningSwift-signed
           path: build/Build/Products/Release/LearningSwift.app
+
+      - name: Upload notarized DMG
+        uses: actions/upload-artifact@v4
+        with:
+          name: LearningSwift-notarized-dmg
+          path: dist/LearningSwift.dmg
