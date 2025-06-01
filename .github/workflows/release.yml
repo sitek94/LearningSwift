@@ -33,6 +33,8 @@ jobs:
       - run: Scripts/setup-certificate.sh
       - run: Scripts/build-app.sh
       - run: Scripts/package-and-notarize-release.sh
+      - run: Scripts/update-appcast.sh
+      - run: Scripts/prepare-release.sh
 
       - id: set_tag_name
         run: echo "tag_name=v"$(cat $VERSION_FILE)"" >> "$GITHUB_OUTPUT"
