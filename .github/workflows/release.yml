@@ -1,0 +1,43 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+env:
+  APP_NAME: 'LearningSwift'
+  APPLE_ID: ${{ secrets.APPLE_ID }}
+  APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+  APPLE_ID_PASSWORD: ${{ secrets.APPLE_ID_PASSWORD }}
+  APPLE_CERTIFICATE_BASE64: ${{ secrets.APPLE_CERTIFICATE_BASE64 }}
+  APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+  BUILD_DIR: ${{ github.workspace }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  XCODE_BUILD_PATH: 'build/Build/Products/Release'
+  VERSION_FILE: 'VERSION.txt'
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '16.2'
+
+      - run: Scripts/print-env.sh
+      - run: Scripts/replace-environment-variables.sh
+      - run: Scripts/setup-certificate.sh
+      - run: Scripts/build-app.sh
+      - run: Scripts/package-and-notarize-release.sh
+
+      - id: set_tag_name
+        run: echo "tag_name=v"$(cat $VERSION_FILE)"" >> "$GITHUB_OUTPUT"
+
+      - uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.set_tag_name.outputs.tag_name }}
+          files: ${{ env.XCODE_BUILD_PATH }}/*.zip
