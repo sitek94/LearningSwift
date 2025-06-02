@@ -6,9 +6,7 @@ version="$(cat $VERSION_FILE)"
 build_number="$GITHUB_RUN_NUMBER"
 date="$(date +'%a, %d %b %Y %H:%M:%S %z')"
 zipName="$APP_NAME-$version.zip"
-
-# TODO: Add more sophisticated verification 
-edSignatureAndLength="length=\"$(stat -f%z "$XCODE_BUILD_PATH/$zipName")\""
+edSignatureAndLength=$(echo "$SPARKLE_ED_PRIVATE_KEY" | bin/sign_update --ed-key-file - "$XCODE_BUILD_PATH/$zipName")
 
 echo "
     <item>
