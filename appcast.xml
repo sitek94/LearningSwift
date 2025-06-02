@@ -5,6 +5,19 @@
     <language>en</language>
 
     <item>
+      <title>Version 1.0.10</title>
+      <pubDate>Mon, 02 Jun 2025 00:39:30 +0000</pubDate>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <enclosure
+        url="https://github.com/sitek94/LearningSwift/releases/download/v1.0.10/LearningSwift-1.0.10.zip"
+        sparkle:version="17"
+        sparkle:shortVersionString="1.0.10"
+        sparkle:edSignature="1gVS6emq4q30Kh15kil4fVDbCTYYFfHpUZkF4eAJZPjB6+tPehq/PkNZVJhrNi/Dbxv0WLgeDuE/p1/lhy+nDw==" length="1241408"
+        type="application/octet-stream"/>
+    </item>
+
+
+    <item>
       <title>Version 1.0.9</title>
       <pubDate>Mon, 02 Jun 2025 00:17:26 +0000</pubDate>
       <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
